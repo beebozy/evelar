@@ -13,18 +13,18 @@
     --foreground: #ededed;
   }
 }
-@layer utilities {
+/* @layer utilities {
   .bg-grid-overlay {
     background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
                       linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
   }
-}
+} */
 
 body {
-  /* color: var(--foreground); */
-  background: var(--background);
-  background-image: url("/public/frame.png");
-
-  font-family: Arial, Helvetica, sans-serif;
+  background: #07091E;
+  background-image: url("/frame.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -3,7 +3,7 @@
 import { useState } from "react";
 // import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { CustomConnectButton } from "./connect_button";
+import Button from "./connect_button";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,7 @@ export default function NavBar() {
       </div>
       
           {/* Connect Wallet Button */}
-          <CustomConnectButton />
+          <Button btnText={"Connect Wallet"} />
       {/* <button className="hidden md:block bg-cyan-400 text-black px-4 py-2 rounded-lg">Connect Wallet</button> */}
     </nav>
   );
