@@ -23,6 +23,13 @@
 
 body {
   background: #07091E;
+  /* background-image: url("/frame.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+.bg-hero{
+  background: #07091E;
   background-image: url("/frame.png");
   background-size: cover;
   background-position: center;
