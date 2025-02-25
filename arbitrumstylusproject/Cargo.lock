@@ -4272,6 +4272,7 @@ dependencies = [
  "keccak-const",
  "lazy_static",
  "mini-alloc 0.8.1",
+ "regex",
  "stylus-core",
  "stylus-proc",
  "stylus-test",
