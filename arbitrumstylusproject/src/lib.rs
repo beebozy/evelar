@@ -1,4 +1,109 @@
+//!
+//! Stylus Hello World
+//!
+//! The following contract implements the Counter example from Foundry.
+//!
+//! ```solidity
+//! contract Counter {
+//!     uint256 public number;
+//!     function setNumber(uint256 newNumber) public {
+//!         number = newNumber;
+//!     }
+//!     function increment() public {
+//!         number++;
+//!     }
+//! }
+//! ```
+//!
+//! The program is ABI-equivalent with Solidity, which means you can call it from both Solidity and Rust.
+//! To do this, run `cargo stylus export-abi`.
+//!
+//! Note: this code is a template-only and has not been audited.
+//!
+// Allow `cargo stylus export-abi` to generate a main function.
+// #![cfg_attr(not(any(test, feature = "export-abi")), no_main)]
+// extern crate alloc;
 
+// /// Import items from the SDK. The prelude contains common traits and macros.
+// use stylus_sdk::{alloy_primitives::U256, prelude::*};
+
+// // Define some persistent storage using the Solidity ABI.
+// // `Counter` will be the entrypoint.
+// sol_storage! {
+//     #[entrypoint]
+//     pub struct Counter {
+//         uint256 number;
+//     }
+// }
+
+// /// Declare that `Counter` is a contract with the following external methods.
+// #[public]
+// impl Counter {
+//     /// Gets the number from storage.
+//     pub fn number(&self) -> U256 {
+//         self.number.get()
+//     }
+
+//     /// Sets a number in storage to a user-specified value.
+//     pub fn set_number(&mut self, new_number: U256) {
+//         self.number.set(new_number);
+//     }
+
+//     /// Sets a number in storage to a user-specified value.
+//     pub fn mul_number(&mut self, new_number: U256) {
+//         self.number.set(new_number * self.number.get());
+//     }
+
+//     /// Sets a number in storage to a user-specified value.
+//     pub fn add_number(&mut self, new_number: U256) {
+//         self.number.set(new_number + self.number.get());
+//     }
+
+//     /// Increments `number` and updates its value in storage.
+//     pub fn increment(&mut self) {
+//         let number = self.number.get();
+//         self.set_number(number + U256::from(1));
+//     }
+
+//     /// Adds the wei value from msg_value to the number in storage.
+//     #[payable]
+//     pub fn add_from_msg_value(&mut self) {
+//         let number = self.number.get();
+//         self.set_number(number + self.vm().msg_value());
+//     }
+// }
+
+// #[cfg(test)]
+// mod test {
+//     use super::*;
+
+//     #[test]
+//     fn test_counter() {
+//         use stylus_sdk::testing::*;
+//         let vm = TestVM::default();
+//         let mut contract = Counter::from(&vm);
+
+//         assert_eq!(U256::ZERO, contract.number());
+
+//         contract.increment();
+//         assert_eq!(U256::from(1), contract.number());
+
+//         contract.add_number(U256::from(3));
+//         assert_eq!(U256::from(4), contract.number());
+
+//         contract.mul_number(U256::from(2));
+//         assert_eq!(U256::from(8), contract.number());
+
+//         contract.set_number(U256::from(100));
+//         assert_eq!(U256::from(100), contract.number());
+
+//         // Override the msg value for future contract method invocations.
+//         vm.set_value(U256::from(2));
+
+//         contract.add_from_msg_value();
+//         assert_eq!(U256::from(102), contract.number());
+//     }
+// }
 
 #![cfg_attr(not(any(test, feature = "export-abi")), no_main)]
 extern crate alloc;
@@ -6,10 +111,10 @@ extern crate alloc;
 use std::result::Result::Ok;
 //use  ethers::{etherscan::account::{self, AccountBalance}, types::spoof::balance};
 use stylus_sdk::{
-    alloy_primitives::{Address, U256}, call::transfer_eth, contract::{self, balance}, evm, msg, prelude::*, storage::{StorageAddress, StorageBool, StorageMap, StorageString, StorageU256}
+    alloy_primitives::{Address, U256}, prelude::*, storage::{StorageAddress, StorageBool, StorageMap, StorageString, StorageU256}
 };
-use alloy_sol_types::{sol, SolEventInterface};
-use stylus_sdk::alloy_sol_types::{SolError, SolType,Panic,Revert};
+use alloy_sol_types::sol;
+use stylus_sdk::alloy_sol_types::{SolError, SolType};
 
 pub trait ERC721Params{
 
@@ -19,10 +124,11 @@ pub trait ERC721Params{
     /// The NFT's Uniform Resource Identifier.
     fn token_uri(token_id: U256) -> String;
 }
-
 sol_storage! {
     #[entrypoint]
     pub struct Event {
+
+        
         StorageU256 next_event_id;
         StorageMap<U256, StorageAddress> event_organizers;
         StorageString event_names;
@@ -40,9 +146,9 @@ sol_storage! {
         mapping(address => uint256) balances;
         /// Token id to approved user map
         mapping(uint256 => address) token_approvals;
-    
+        /// User to operator map (the operator can manage all NFTs of the owner)
         mapping(address => mapping(address => bool)) operator_approvals;
-        /// Total supply  of NFT 
+        /// Total supply
         uint256 total_supply;
 
         
@@ -76,6 +182,8 @@ sol!{
 }
 
 sol! {
+   
+   
     error InvalidTokenId(uint256 token_id);
     // The specified address is not the owner of the specified token id
     error NotOwner(address from, uint256 token_id, address real_owner);
@@ -193,7 +301,7 @@ impl Event{
         // Only organizer can issue refunds
         if self.vm().msg_sender() != organizer {
              return Err(EventError::NotOrganizer(NotOrganizer {}));
-               
+            
         }
 
         // Check if registered
@@ -247,15 +355,15 @@ impl Event{
       let _ =  self.vm().transfer_eth(organizer, balance);
 
         // to log event 
-        // self.vm(), Loog{Transfer(organizer, event_id, balance)};
+        // self.vm().Transfer(organizer, event_id, balance);
 
         Ok(())
           
         
     }
 
-    the function to transfer nft 
-    the token_id is for 
+    // the function to transfer nft 
+    // the token_id is for 
     pub fn transfer(&mut self, token_id: U256, from: Address, to: Address) -> Result<(), Erc721Error> {
         let mut owner = self.owners.setter(token_id);
         let previous_owner = owner.get();
