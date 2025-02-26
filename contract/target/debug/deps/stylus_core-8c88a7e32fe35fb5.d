@@ -1,0 +1,11 @@
+/Users/bashir/Documents/evelar/evelar_contract/target/debug/deps/libstylus_core-8c88a7e32fe35fb5.rmeta: /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/lib.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/calls/mod.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/calls/context.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/calls/errors.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/deploy.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/host.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/storage.rs
+
+/Users/bashir/Documents/evelar/evelar_contract/target/debug/deps/stylus_core-8c88a7e32fe35fb5.d: /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/lib.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/calls/mod.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/calls/context.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/calls/errors.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/deploy.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/host.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/storage.rs
+
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/lib.rs:
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/calls/mod.rs:
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/calls/context.rs:
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/calls/errors.rs:
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/deploy.rs:
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/host.rs:
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/stylus-core-0.8.0/src/storage.rs:
