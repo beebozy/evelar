@@ -6,6 +6,7 @@ import { WagmiProvider } from 'wagmi';
 import {  lightTheme, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 
 import { config } from '../wagmi';
+import { ToastContainer } from 'react-toastify';
 
 const queryClient = new QueryClient();
 const customTheme = lightTheme({
@@ -20,6 +21,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
+        <ToastContainer />
         <RainbowKitProvider
             theme={customTheme}
             >{children}</RainbowKitProvider>

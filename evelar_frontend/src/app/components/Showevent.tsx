@@ -14,7 +14,7 @@ interface Event {
   attendees: number;
 }
 
-export default function Dashboard() {
+export default function ShowEvent() {
   const [activeNav, setActiveNav] = useState<NavItem>('dashboard');
   const [events] = useState<Event[]>([
     {

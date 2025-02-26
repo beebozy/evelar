@@ -121,4 +121,3 @@ export const Contract_ABI =
     }
   ]
 
-  export const Contract_Address = "0x7ecb793f1de94aea690262409481e8e724876bf0";

@@ -2,7 +2,7 @@
 
 
 import { Bottomnav } from "./components/bottomnav";
-import CreateEvent  from "./components/CreateEvent";
+// import CreateEvent  from "./components/CreateEvent";
 import { EventSection } from "./components/event_section";
 import Hero from "./components/hero";
 import { InfoSection } from "./components/infoSection";

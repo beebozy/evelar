@@ -19,17 +19,17 @@ export default function NavBar() {
       
       {/* Navbar Links */}
       <div className={`absolute md:static top-16 left-0 right-0 md:flex md:space-x-6 text-gray-300 bg-[#0A0A12] md:bg-transparent md:p-0 p-4 ${isOpen ? "block" : "hidden"}`}>
-        <a href="#" className="block md:inline-block hover:text-white py-2">About Evelar</a>
-        <a href="#" className="block md:inline-block hover:text-white py-2">Create Event</a>
+        <a href="" className="block md:inline-block hover:text-white py-2">Home</a>
+        <Link href={"createvent"} className="block px-4 py-2 hover:bg-gray-100">Create Event</Link>
         <div className="relative group">
           <button className="block md:inline-block hover:text-white flex items-center py-2">Explore <span className="ml-1">▼</span></button>
           <div className="absolute left-0 mt-2 w-40 bg-[#07091E] text-white rounded-lg shadow-lg hidden group-hover:block">
             <Link href={"dashboard"} className="block px-4 py-2 hover:bg-gray-100">Tech Event</Link>
-            <a href="" className="block px-4 py-2 hover:bg-gray-100">Career Event</a>
+            <Link href={"dashboard"} className="block px-4 py-2 hover:bg-gray-100">Create Event</Link>
             <a href="" className="block px-4 py-2 hover:bg-gray-100">DappOverAppEvent</a>
           </div>
         </div>
-        <a href="#" className="block md:inline-block hover:text-white py-2">News and Media</a>
+        <Link href={"eventdashboard"} className="block md:inline-block hover:text-white py-2">Dashboard</Link>
       </div>
       
           {/* Connect Wallet Button */}
