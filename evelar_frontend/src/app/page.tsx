@@ -12,7 +12,7 @@ export default function Home() {
   return (
     // <div>
     <div>
-      <Hero title={"One Event At A Time"} subtitle={"Onchain Event Creation With Evelar"} description={"Establishing a comprehensive digital infrastructure. Our digital platform offers services ranging from digitizing pathology slides to AI"}></Hero>
+      <Hero title={"Bring Your Events Onchain with Evelar – Create, Host, and Discover!"} subtitle={""} description={"Evelar empowers creators and event enthusiasts to effortlessly organize and attend events, leveraging blockchain decentralization for a stress-free experience."}showButton={true}></Hero>
       {/* <div> </div> */}
       <EventSection></EventSection>
       <InfoSection></InfoSection>

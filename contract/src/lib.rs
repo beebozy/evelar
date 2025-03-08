@@ -159,6 +159,18 @@ impl Event{
         event_id
     }
 
+
+    pub fn get_event_list(&self) -> (U256, String, String) {
+       
+       
+        let event_id = self.next_event_id.get();
+        let name = self.event_names.get_string();
+        let location = self.event_locations.get_string();
+        (event_id, name, location)
+    }
+
+
+
     #[payable]
     pub fn register(&mut self, event_id: U256)->Result<(), EventError> {
         let attendee = self.vm().msg_sender();
@@ -319,3 +331,5 @@ impl Event{
         Ok(())
     }
 }
+
+
