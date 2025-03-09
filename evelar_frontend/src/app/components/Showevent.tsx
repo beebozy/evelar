@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { LogOut, User, Wallet, Gift, LayoutDashboard, MapPin } from 'lucide-react';
+import Link from 'next/link';
 
 // Define the types
 type NavItem = 'dashboard' | 'wallet' | 'rewards' | 'profile';
@@ -102,13 +103,13 @@ function Sidebar({ activeNav, setActiveNav }: SidebarProps) {
   return (
     <aside className="fixed left-0 top-0 h-full w-[240px] border-r border-white/10 p-6">
       <div className="flex h-full flex-col">
-        <a href="/" className="mb-8 text-xl font-semibold">
+        <Link href="/" className="mb-8 text-xl font-semibold">
           <span className="text-[#00e2ff]">E</span>velar
-        </a>
+        </Link>
 
         <nav className="flex flex-1 flex-col justify-evenly py-12">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={`/${item.name}`}
               className={`flex items-center gap-3 rounded-lg px-4 py-3 ${
@@ -121,7 +122,7 @@ function Sidebar({ activeNav, setActiveNav }: SidebarProps) {
             >
               <item.icon size={20} />
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
