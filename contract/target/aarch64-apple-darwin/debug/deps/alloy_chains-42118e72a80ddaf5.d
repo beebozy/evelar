@@ -1,0 +1,11 @@
+/Users/bashir/Documents/evelar/contract/target/aarch64-apple-darwin/debug/deps/liballoy_chains-42118e72a80ddaf5.rmeta: /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/lib.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/chain.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/named.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/spec.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/../README.md
+
+/Users/bashir/Documents/evelar/contract/target/aarch64-apple-darwin/debug/deps/liballoy_chains-42118e72a80ddaf5.rlib: /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/lib.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/chain.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/named.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/spec.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/../README.md
+
+/Users/bashir/Documents/evelar/contract/target/aarch64-apple-darwin/debug/deps/alloy_chains-42118e72a80ddaf5.d: /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/lib.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/chain.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/named.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/spec.rs /Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/../README.md
+
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/lib.rs:
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/chain.rs:
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/named.rs:
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/spec.rs:
+/Users/bashir/.cargo/registry/src/index.crates.io-6f17d22bba15001f/alloy-chains-0.1.59/src/../README.md:

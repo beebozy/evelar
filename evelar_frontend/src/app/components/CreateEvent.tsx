@@ -1,14 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import { useState } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useReadContract, useAccount, useWriteContract, useConnect } from 'wagmi';
+import {  useAccount, useWriteContract, useConnect } from 'wagmi';
 
 import { Contract_ABI } from "../../connection/evelar_abi";
 import { Contract_Address } from "../../connection/contract_address";
 import { injected } from 'wagmi/connectors';
-import { arbitrumSepolia, arbitrum } from 'viem/chains';
-import NavBar from "./nav";
+import { arbitrumSepolia } from 'viem/chains';
+// import NavBar from "./nav";
 import HeroSection from "./hero";
 
 
@@ -118,9 +119,9 @@ export default function CreateEventPage() {
                   className="w-full p-2 rounded-md bg-transparent border border-gray-700"
                 />
                 <input
-                  type="number"
-                  name="price in Arbitrum"
-                  placeholder="Price in Arbitrum"
+                   type="number"
+                   name="numberOfTickets"
+                   placeholder="Number of Tickets"
                   value={eventData.price}
                   onChange={handleChange}
                   className="w-full p-2 rounded-md bg-transparent border border-gray-700"

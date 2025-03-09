@@ -23,9 +23,9 @@ export default function NavBar() {
         <Link href={"createvent"} className="block px-4 py-2 hover:bg-gray-100">Create Event</Link>
         <div className="relative group">
           <button className="block md:inline-block hover:text-white flex items-center py-2">Explore <span className="ml-1">▼</span></button>
-          <div className="absolute left-0 mt-2 w-40 bg-[#07091E] text-white rounded-lg shadow-lg hidden group-hover:block">
-            <Link href={"dashboard"} className="block px-4 py-2 hover:bg-gray-100">Tech Event</Link>
-            <Link href={"dashboard"} className="block px-4 py-2 hover:bg-gray-100">Create Event</Link>
+          <div className="absolute left-0 w-40 bg-[#07091E] text-white rounded-lg hidden group-hover:block">
+            <Link href={"createvent"} className="block px-4 py-2 hover:bg-gray-100">Tech Event</Link>
+            <Link href={"createvent"} className="block px-4 py-2 hover:bg-gray-100">Create Event</Link>
             <a href="" className="block px-4 py-2 hover:bg-gray-100">DappOverAppEvent</a>
           </div>
         </div>

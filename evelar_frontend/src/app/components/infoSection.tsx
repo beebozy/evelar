@@ -14,8 +14,7 @@ export const InfoSection = () => {
                     </div>
                 </div>
                 <p className=" w-[440px] text-gray-400 text-[#B7B7B7] mx-40">
-  Establishing a comprehensive digital infrastructure. Our digital platform offers services ranging from digitizing pathology slides to AI. Establishing a comprehensive digital infrastructure. Our digital platform offers services ranging from digitizing pathology slides to AI. Establishing a comprehensive digital infrastructure. Our digital platform offers services ranging from digitizing pathology slides to AI.
-</p>
+                Evelar empowers individuals and organizations to seamlessly create and attend events of their choice. Our platform provides the flexibility to host events, participate in them, and issue certificates of participation in the form of NFTs. With no geographical restrictions, Evelar is accessible to users worldwide, ensuring a truly borderless event experience.</p>
             </div>
         </div>
     );

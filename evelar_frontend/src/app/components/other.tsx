@@ -5,7 +5,7 @@ export const Other = () => {
     return (
         <div className='flex item-center justify-center my-20 '>
             
-            <img src="/frame1.png" alt="image" />
+            <img src="/f2.png" alt="image" />
         </div>
     );
 }

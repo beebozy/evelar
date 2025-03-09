@@ -1,11 +1,13 @@
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
 import {
   arbitrum,
+  arbitrumSepolia,
   base,
   mainnet,
   optimism,
   polygon,
   sepolia,
+  
 } from 'wagmi/chains';
 
 export const config = getDefaultConfig({
@@ -16,6 +18,7 @@ export const config = getDefaultConfig({
     polygon,
     optimism,
     arbitrum,
+    arbitrumSepolia,
     base,
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
   ],
